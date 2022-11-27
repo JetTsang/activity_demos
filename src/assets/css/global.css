@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* 去掉li的点点 */
+li {
+    list-style: none;
+}
+
+/* 去掉a标签的下划线 */
+a {
+    text-decoration: none;
+}
+
+/* 去掉外部的轮廓线 */
+textarea input {
+    outline: none;
+}

@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    background-color: #e36c3f;
+}
 /* 去掉li的点点 */
 li {
     list-style: none;

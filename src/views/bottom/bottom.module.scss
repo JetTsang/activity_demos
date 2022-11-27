@@ -1,0 +1,12 @@
+.bottom {
+    width: 100%;
+    div {
+        img {
+            width: 100%;
+            &.comment {
+                padding: 8px 16px;
+                border-radius: 6px;
+            }
+        }
+    }
+}

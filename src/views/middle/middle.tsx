@@ -6,7 +6,7 @@ import lifeImg from '../../assets/img/life.jpg'
 import logoImg from '../../assets/img/logo.png'
 import { useState, FC, useRef, useEffect } from 'react'
 import styles from './middle.module.scss'
-
+import { throttle } from '../../utils/util'
 const TabsList = [
     {
         key: 'cartoon',
@@ -54,7 +54,8 @@ const Middle: FC = () => {
 
     // 向下滚动的时候 ，实现吸顶
     const onWindowScroll = ()=>{
-
+        console.log('12312312313');
+        
         if(middleRef.current){
             const {top} = middleRef.current.getBoundingClientRect() 
             setisFixed(top<=0)
@@ -82,7 +83,7 @@ const Middle: FC = () => {
 
     // 组件创建之后去监听
     useEffect(()=>{
-        window.addEventListener('scroll',onWindowScroll)
+        window.addEventListener('scroll',throttle(onWindowScroll,50))
         return ()=>{
             window.removeEventListener('scroll',onWindowScroll)
         }
